@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="40px" viewBox="0 0 32 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63.1 (101010) - https://sketch.com -->
+    <title>C7F2072C-4AC3-4108-B2E7-2B79DEDD7452</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M38,4 C39.2836556,4 40,4.74619208 40,6 L40,35.999 L16,36 C14.9456382,36 14.0818349,36.8158778 14.0054857,37.8507377 L14,38 C14,39.1045695 14.8954305,40 16,40 L16,40 L40,39.999 L40,42 C40,43.2538079 39.2836556,44 38,44 L14,44 C10.5072054,44 8,41.3883277 8,38 L8,10 C8,6.61167229 10.5072054,4 14,4 L38,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Plashon-(ExtraLarge:-Desktop---12-col)-1" transform="translate(-379.000000, -1662.000000)">
+            <g id="Book" transform="translate(371.000000, 1658.000000)">
+                <polygon id="Shape" points="0 0 48 0 48 48 0 48"></polygon>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#0D4992" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
