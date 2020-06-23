@@ -94,7 +94,7 @@
                         </header>
 
                         <div id="dealsapp"></div>
-                        <script src="http://plashon.com/deals-test/translator.js"></script>
+                        <script src="./js/translator.js"></script>
                         <script>
                             !(function(e) {
                                 function r(r) {
