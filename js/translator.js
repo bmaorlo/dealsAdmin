@@ -441,6 +441,9 @@ function translatorLib(Translator) {
   Translator.add('deals.months.Thursday', 'חמישי', 'deals', 'en')
   Translator.add('deals.months.Friday', 'שישי', 'deals', 'en')
   Translator.add('deals.months.Saturday', 'שבת', 'deals', 'en')
+
+  Translator.add('deals.dealItem.deals', 'דילים', 'deals', 'en')
+
 }
 
 // import translate from '../functions/translator'
