@@ -3,7 +3,7 @@
     <head>
         <title>SmartDeals.co.il</title>
         <meta name="google-site-verification" content="yaFz5C6m8rCj2hxIS_MJ-wjFoge3p8hF8GR1kIpvg70">
-        
+
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="pull-right">
-                    <img src="https://s3.eu-central-1.amazonaws.com/img.smartair.co.il/custom/logo/logo_181x36.png" alt="">
+                    <img class="logo" src="./images/group-3_2020-06-24/group-3@3x.png" alt="">
                 </div>
 
             </div>
@@ -48,50 +48,25 @@
             <div class="overlayer"></div>
             <div class="side-bar-menu">
                 <div class="container">
-                    <img src="https://s3.eu-central-1.amazonaws.com/img.smartair.co.il/custom/logo/logo_181x36.png">
-                    <ul>
-                        <li class="menu-item active">צפה בדילים</li>
-                        <li class="menu-item">מי אנחנו</li>
-                        <li class="menu-item">איך זה עובד</li>
+                    <ul style="margin-top:20px;">
+                        <li class="menu-item active">&bull;&nbsp;צפה בדילים</li>
+                        <li class="menu-item">&bull;&nbsp;מי אנחנו</li>
+                        <li class="menu-item">&bull;&nbsp;איך זה עובד</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <header>
-
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                                <ol class="carousel-indicators">
-                                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                                  <!--<li data-target="#myCarousel" data-slide-to="2"></li>
-                                  <li data-target="#myCarousel" data-slide-to="3"></li>-->
-                                </ol>
-
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <div class="content-banner">
-                                            <div class="section-1">
-                                                <div class="banner">
-                                                    <img src="https://d16tr0byigrcd.cloudfront.net/images/sfMedia/active/display_block/SA_Packages_Desktop1920x700_orig.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="content-banner">
-                                            <div class="section-1">
-                                                <div class="banner">
-                                                    <img src="https://s3.eu-central-1.amazonaws.com/img.smartair.co.il/custom/homepage/SA_Header1920x500_10Payments.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </header>
+            <div>
+                <div class="content-banner">
+                    <div class="section-1">
+                        <div class="banner">
+                            <img src="./images/hero/group-copy-2@3x.png">
+                        </div>
+                    </div>
+                </div>
+        </header>
 
                         <div id="dealsapp"></div>
                         <script src="./js/translator.js"></script>
@@ -212,7 +187,7 @@
                                     </div>
 
                                     <div class="col-sm-3 footer-item">
-                                        <img src="https://s3.eu-central-1.amazonaws.com/img.smartair.co.il/custom/logo/logo_181x36.png" alt="" style="color: white">
+                                        <img src="./images/group-3_2020-06-24/group-3@3x.png" alt="" style="color: white">
                                         <!--<div>
                                             <a href="https://instagram.com/smartair.co.il/" target="_blank"><i class="fab fa-instagram"></i></a>
                                             <a href="https://www.youtube.com/channel/UChN_ssLdkFFehOfz660Qnaw" target="_blank"><i class="fab fa-youtube"></i></a>
