@@ -21,6 +21,12 @@ class ApiController extends Controller
             ]);
         }
 
+        array_push($response['specialDates'], [
+            "name"=> 'דילים דקה 90',
+            "from_date"=>date('d/m/Y',strtotime('tomorrow')),
+            "to_date"=>date('d/m/Y', strtotime("+7 day")),
+        ]);
+
         $locations = Location::where('active', true)->get();
 
         foreach ($locations  as $i => $location) {
