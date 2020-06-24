@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="pull-right">
-                    <img class="logo" src="./images/group-3_2020-06-24/group-3@3x.png" alt="">
+                    <img class="logo" src="./images/group-3_2020-06-24/group-3.png" alt="">
                 </div>
 
             </div>
@@ -62,7 +62,7 @@
                 <div class="content-banner">
                     <div class="section-1">
                         <div class="banner">
-                            <img src="./images/hero/group-copy-2@3x.png">
+                            <img src="./images/hero/group-copy-2.png">
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                                     </div>
 
                                     <div class="col-sm-3 footer-item">
-                                        <img src="./images/group-3_2020-06-24/group-3@3x.png" alt="" style="color: white">
+                                        <img src="./images/group-3_2020-06-24/group-3.png" alt="" style="color: white">
                                         <!--<div>
                                             <a href="https://instagram.com/smartair.co.il/" target="_blank"><i class="fab fa-instagram"></i></a>
                                             <a href="https://www.youtube.com/channel/UChN_ssLdkFFehOfz660Qnaw" target="_blank"><i class="fab fa-youtube"></i></a>
