@@ -149,7 +149,7 @@
                             })([])
                         </script>
 
-                        <section style="background-color:#fafafc;padding-bottom:50px;padding-top:50px;">
+                        <section style="background-color:#17678e;padding-bottom:50px;padding-top:50px;">
                             <div class="content">
                                 <div class="section">
                                     <div class="left-box">
