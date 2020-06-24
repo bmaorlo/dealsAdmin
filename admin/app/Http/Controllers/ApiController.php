@@ -13,6 +13,13 @@ class ApiController extends Controller
     public function deals(){
         $response = ['specialDates'=>[], "items"=>[]];
         $specialDates = Specialdate::where('active', true)->get();
+
+        array_push($response['specialDates'], [
+            "name"=> 'דילים דקה 90',
+            "from_date"=>date('d/m/Y',strtotime('tomorrow')),
+            "to_date"=>date('d/m/Y', strtotime("+14 day")),
+        ]);
+
         foreach ($specialDates as $date){
             array_push($response['specialDates'], [
                 "name"=> $date->name,
@@ -21,11 +28,7 @@ class ApiController extends Controller
             ]);
         }
 
-        array_push($response['specialDates'], [
-            "name"=> 'דילים דקה 90',
-            "from_date"=>date('d/m/Y',strtotime('tomorrow')),
-            "to_date"=>date('d/m/Y', strtotime("+7 day")),
-        ]);
+
 
         $locations = Location::where('active', true)->get();
 
