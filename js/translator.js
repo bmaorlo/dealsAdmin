@@ -396,6 +396,7 @@ function translatorLib(Translator) {
   Translator.add('deals.chips.hotelRating', 'דירוג מלון', 'deals', 'en')
   // for DealContent
   Translator.add('deals.dealList.noFlights', 'אין תוצאות', 'deals', 'en')
+  Translator.add('deals.dealItem.deals', 'דילים', 'deals', 'en')
   Translator.add('deals.dealItem.hotelFlight', 'מלון + טיסה', 'deals', 'en')
   Translator.add('deals.dealItem.moreOffers', ' תוצאות נוספות', 'deals', 'en')
   Translator.add('deals.dealContent.from', 'מ', 'deals', 'en')
@@ -403,15 +404,15 @@ function translatorLib(Translator) {
   Translator.add('deals.dealContent.details', 'פרטים', 'deals', 'en')
   Translator.add('deals.dealContent.nights', 'לילות', 'deals', 'en')
   Translator.add('deals.dealContent.flight', 'טיסה', 'deals', 'en')
-  Translator.add('deals.dealContent.inboundFlight', 'טיסה הלוך', 'deals', 'en')
-  Translator.add('deals.dealContent.outboundFlight', 'טיסה חזור', 'deals', 'en')
+  Translator.add('deals.dealContent.inboundFlight', 'טיסה חזור', 'deals', 'en')
+  Translator.add('deals.dealContent.outboundFlight', 'טיסה הלוך', 'deals', 'en')
   Translator.add('deals.dealContent.landingTime', 'זמן נחיתה', 'deals', 'en')
   Translator.add('deals.dealContent.directFlight', 'טיסה ישירה', 'deals', 'en')
   Translator.add('deals.dealContent.stops', 'עצירות', 'deals', 'en')
   Translator.add('deals.dealContent.departure', 'יציאה', 'deals', 'en')
   Translator.add('deals.dealContent.return', 'חזרה', 'deals', 'en')
   Translator.add('deals.dealContent.accomodation', 'מלון', 'deals', 'en')
-  Translator.add('deals.dealContent.best', 'הטוטוב מאוד', 'deals', 'en')
+  Translator.add('deals.dealContent.best', 'טוב מאוד', 'deals', 'en')
   Translator.add('deals.dealContent.excelent', 'מעולה', 'deals', 'en')
   Translator.add('deals.dealContent.good', 'טוב', 'deals', 'en')
   Translator.add('deals.dealContent.reviews', 'חוות דעת', 'deals', 'en')
@@ -441,9 +442,6 @@ function translatorLib(Translator) {
   Translator.add('deals.months.Thursday', 'חמישי', 'deals', 'en')
   Translator.add('deals.months.Friday', 'שישי', 'deals', 'en')
   Translator.add('deals.months.Saturday', 'שבת', 'deals', 'en')
-
-  Translator.add('deals.dealItem.deals', 'דילים', 'deals', 'en')
-
 }
 
 // import translate from '../functions/translator'
