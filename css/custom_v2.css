@@ -664,6 +664,14 @@ footer{
 
 @media screen and (max-width: 768px){
 
+
+	.banner{
+		height:100%;
+	}
+	.banner img{
+		height:100%;
+	}
+
 .svg {
 	display: flex;
 	justify-content: flex-start;;
