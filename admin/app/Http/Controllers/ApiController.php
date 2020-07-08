@@ -45,31 +45,21 @@ class ApiController extends Controller
                 continue;
             }
 
-            array_push($response['items'],[
-                'cityId'=>$location->id,
-                'cityName'=>$location->locationName,
-                'cityPhoto'=>$location->locationPhoto,
-                'locationAbout'=>$location->locationAbout,
-                'locationAdvice'=>$location->blob,
-                'themes'=>[],
-                'deals'=>[],
-            ]);
-
+            $locationTheme = array();
             foreach ($themes as $theme) {
-                $response['items'][$i]['themes'][$theme->theme->id]=$theme->theme->name;
+                $locationTheme[$theme->theme->id]=$theme->theme->name;
             }
 
-
+            $dealsData = array();
             foreach ($deals as $deal){
-
-                array_push($response['items'][$i]['deals'],[
-                   'dealData'=>[
-                       'dealId'=>$deal->id,
-                       'outboundDate'=>date('d/m/Y', strtotime($deal->outboundDate)),
-                       'inboundDate'=>date('d/m/Y', strtotime($deal->inboundDate)),
-                       'price'=>$deal->price,
-                       'packageDeeplinkUrl'=>$deal->packageDeeplinkUrl,
-                   ],
+                $dealsData[]=[
+                    'dealData'=>[
+                        'dealId'=>$deal->id,
+                        'outboundDate'=>date('d/m/Y', strtotime($deal->outboundDate)),
+                        'inboundDate'=>date('d/m/Y', strtotime($deal->inboundDate)),
+                        'price'=>floor($deal->price / 2),
+                        'packageDeeplinkUrl'=>$deal->packageDeeplinkUrl,
+                    ],
                     'hotelData'=>[
                         'name'=>$deal->hotelName,
                         'board'=>$deal->hotelRoomBoard,
@@ -104,8 +94,22 @@ class ApiController extends Controller
                             "city_to_airport_code"=> $deal->flightDataInboundCityToAirportCode
                         ]
                     ]
-                ]);
+                ];
             }
+
+
+            array_push($response['items'],[
+                'cityId'=>$location->id,
+                'cityName'=>$location->locationName,
+                'cityPhoto'=>$location->locationPhoto,
+                'locationAbout'=>$location->locationAbout,
+                'locationAdvice'=>$location->blob,
+                'themes'=>$locationTheme,
+                'deals'=>$dealsData,
+            ]);
+
+
+
         }
 
         return response()->json($response);
