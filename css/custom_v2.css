@@ -84,7 +84,11 @@ nav{
   text-align: center;
 }
 
-
+.DealItem_makeReservation__1mAzU a:hover a:focus{
+	color: white;
+	text-decoration: none;
+	background-color: #faa704;
+}
 .App_App__3bDxu img
 {
 	height: 200px !important;
