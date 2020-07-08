@@ -59,7 +59,6 @@ class ApiController extends Controller
                 $response['items'][$i]['themes'][$theme->theme->id]=$theme->theme->name;
             }
 
-            if(!isset($response['items'][$i]['deals'])) { $response['items'][$i]['deals'] = array();}
 
             foreach ($deals as $deal){
 
