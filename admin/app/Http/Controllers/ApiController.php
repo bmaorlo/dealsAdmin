@@ -52,6 +52,25 @@ class ApiController extends Controller
 
             $dealsData = array();
             foreach ($deals as $deal){
+
+                switch(strtolower($deal->hotelRoomBoard)){
+                    case 'Bed and Breakfast':
+                        $board = 'breakfast';
+                    break;
+                    case 'half board':
+                        $board = 'halfboard';
+                    break;
+                    case 'full board':
+                        $board = 'fullboard';
+                    break;
+                    case 'all inclusive':
+                        $board = 'allinclusive';
+                    break;
+                    default:
+                        $board = 'ro';
+                    break;
+                }
+
                 $dealsData[]=[
                     'dealData'=>[
                         'dealId'=>$deal->id,
@@ -62,7 +81,7 @@ class ApiController extends Controller
                     ],
                     'hotelData'=>[
                         'name'=>$deal->hotelName,
-                        'board'=>$deal->hotelRoomBoard,
+                        'board'=>$board,
                         'rating'=>4,
                         'trustYouReviews'=>[
                             'reviewCount'=>$deal->hotelTrustYouReviewsReviewCount,
