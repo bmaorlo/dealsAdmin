@@ -1,17 +1,17 @@
 var Translator = (function (document, undefined) {
   var _messages = {},
-    _domains = [],
-    _sPluralRegex = new RegExp(/^\w+\: +(.+)$/),
-    _cPluralRegex = new RegExp(
-      /^\s*((\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]]))\s?(.+?)$/
-    ),
-    _iPluralRegex = new RegExp(
-      /^\s*(\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]])/
-    )
+      _domains = [],
+      _sPluralRegex = new RegExp(/^\w+\: +(.+)$/),
+      _cPluralRegex = new RegExp(
+          /^\s*((\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]]))\s?(.+?)$/
+      ),
+      _iPluralRegex = new RegExp(
+          /^\s*(\{\s*(\-?\d+[\s*,\s*\-?\d+]*)\s*\})|([\[\]])\s*(-Inf|\-?\d+)\s*,\s*(\+?Inf|\-?\d+)\s*([\[\]])/
+      )
   function replace_placeholders(message, placeholders) {
     var _i,
-      _prefix = Translator.placeHolderPrefix,
-      _suffix = Translator.placeHolderSuffix
+        _prefix = Translator.placeHolderPrefix,
+        _suffix = Translator.placeHolderSuffix
     for (_i in placeholders) {
       var _r = new RegExp(_prefix + _i + _suffix, 'g')
       if (_r.test(message)) {
@@ -22,7 +22,7 @@ var Translator = (function (document, undefined) {
   }
   function get_message(id, domain, locale, currentLocale, localeFallback) {
     var _locale = locale || currentLocale || localeFallback,
-      _domain = domain
+        _domain = domain
     if (undefined == _messages[_locale]) {
       if (undefined == _messages[localeFallback]) {
         return id
@@ -59,11 +59,11 @@ var Translator = (function (document, undefined) {
   }
   function pluralize(message, number, locale) {
     var _p,
-      _e,
-      _explicitRules = [],
-      _standardRules = [],
-      _parts = message.split(Translator.pluralSeparator),
-      _matches = []
+        _e,
+        _explicitRules = [],
+        _standardRules = [],
+        _parts = message.split(Translator.pluralSeparator),
+        _matches = []
     for (_p in _parts) {
       var _part = _parts[_p]
       if (_cPluralRegex.test(_part)) {
@@ -81,7 +81,7 @@ var Translator = (function (document, undefined) {
         _matches = _e.match(_iPluralRegex)
         if (_matches[1]) {
           var _ns = _matches[2].split(','),
-            _n
+              _n
           for (_n in _ns) {
             if (number == _ns[_n]) {
               return _explicitRules[_e]
@@ -91,8 +91,8 @@ var Translator = (function (document, undefined) {
           var _leftNumber = convert_number(_matches[4])
           var _rightNumber = convert_number(_matches[5])
           if (
-            ('[' === _matches[3] ? number >= _leftNumber : number > _leftNumber) &&
-            (']' === _matches[6] ? number <= _rightNumber : number < _rightNumber)
+              ('[' === _matches[3] ? number >= _leftNumber : number > _leftNumber) &&
+              (']' === _matches[6] ? number <= _rightNumber : number < _rightNumber)
           ) {
             return _explicitRules[_e]
           }
@@ -205,10 +205,10 @@ var Translator = (function (document, undefined) {
       case 'sr':
       case 'uk':
         return number % 10 == 1 && number % 100 != 11
-          ? 0
-          : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20)
-          ? 1
-          : 2
+            ? 0
+            : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 10 || number % 100 >= 20)
+                ? 1
+                : 2
       case 'cs':
       case 'sk':
         return number == 1 ? 0 : number >= 2 && number <= 4 ? 1 : 2
@@ -216,46 +216,46 @@ var Translator = (function (document, undefined) {
         return number == 1 ? 0 : number == 2 ? 1 : 2
       case 'lt':
         return number % 10 == 1 && number % 100 != 11
-          ? 0
-          : number % 10 >= 2 && (number % 100 < 10 || number % 100 >= 20)
-          ? 1
-          : 2
+            ? 0
+            : number % 10 >= 2 && (number % 100 < 10 || number % 100 >= 20)
+                ? 1
+                : 2
       case 'sl':
         return number % 100 == 1 ? 0 : number % 100 == 2 ? 1 : number % 100 == 3 || number % 100 == 4 ? 2 : 3
       case 'mk':
         return number % 10 == 1 ? 0 : 1
       case 'mt':
         return number == 1
-          ? 0
-          : number === 0 || (number % 100 > 1 && number % 100 < 11)
-          ? 1
-          : number % 100 > 10 && number % 100 < 20
-          ? 2
-          : 3
+            ? 0
+            : number === 0 || (number % 100 > 1 && number % 100 < 11)
+                ? 1
+                : number % 100 > 10 && number % 100 < 20
+                    ? 2
+                    : 3
       case 'lv':
         return number === 0 ? 0 : number % 10 == 1 && number % 100 != 11 ? 1 : 2
       case 'pl':
         return number == 1
-          ? 0
-          : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 12 || number % 100 > 14)
-          ? 1
-          : 2
+            ? 0
+            : number % 10 >= 2 && number % 10 <= 4 && (number % 100 < 12 || number % 100 > 14)
+                ? 1
+                : 2
       case 'cy':
         return number == 1 ? 0 : number == 2 ? 1 : number == 8 || number == 11 ? 2 : 3
       case 'ro':
         return number == 1 ? 0 : number === 0 || (number % 100 > 0 && number % 100 < 20) ? 1 : 2
       case 'ar':
         return number === 0
-          ? 0
-          : number == 1
-          ? 1
-          : number == 2
-          ? 2
-          : number >= 3 && number <= 10
-          ? 3
-          : number >= 11 && number <= 99
-          ? 4
-          : 5
+            ? 0
+            : number == 1
+                ? 1
+                : number == 2
+                    ? 2
+                    : number >= 3 && number <= 10
+                        ? 3
+                        : number >= 11 && number <= 99
+                            ? 4
+                            : 5
       default:
         return 0
     }
@@ -297,7 +297,7 @@ var Translator = (function (document, undefined) {
     },
     add: function (id, message, domain, locale) {
       var _locale = locale || this.locale || this.fallback,
-        _domain = domain || this.defaultDomain
+          _domain = domain || this.defaultDomain
       if (!_messages[_locale]) {
         _messages[_locale] = {}
       }
@@ -419,9 +419,14 @@ function translatorLib(Translator) {
   Translator.add('deals.dealContent.reservation', 'הזמן', 'deals', 'en')
   Translator.add('deals.dealContent.from', 'מ', 'deals', 'en')
   Translator.add('deals.dealContent.dealDetails', 'פרטים', 'deals', 'en')
+  Translator.add('deals.dealContent.board.ro', 'לינה בלבד', 'deals', 'en')
+  Translator.add('deals.dealContent.board.allinclusive', 'הכל כלול', 'deals', 'en')
+  Translator.add('deals.dealContent.board.fullboard', 'פנסיון מלא', 'deals', 'en')
+  Translator.add('deals.dealContent.board.halfboard', 'חצי פנסיון', 'deals', 'en')
+  Translator.add('deals.dealContent.board.breakfast', 'כולל ארוחת בוקר', 'deals', 'en')
 //
   Translator.add('deals.cityDeals.resultFor', 'תוצאות ל', 'deals', 'en')
-  
+
   Translator.add('deals.months.January', 'ינואר', 'deals', 'en')
   Translator.add('deals.months.February', 'פברואר', 'deals', 'en')
   Translator.add('deals.months.March', 'מרץ', 'deals', 'en')
